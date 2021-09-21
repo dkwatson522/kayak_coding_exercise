@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding-bottom: 0;
+}
+.navigation {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-left: 16px;
+  background-color: #FFFFFF
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  background-color: #F9FAFB;
+  padding-left: 94px;
+  padding-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  padding-top: 67px;
+  padding-bottom: 73px;
+  font-family: HelveticaNeue;
+  font-size: 44px;
+  font-weight: 900;
+  color:#000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filter {
+  padding-bottom: 56px;
+}
+
+.filter-header {
+  margin-bottom: 23px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  color:#192024;
+}
+
+.filter input {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.filter label {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: normal;
+  color: #192024;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.filter-checkboxes {
+  display: flex;
+  flex-direction: row;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 300px) );
+  align-items: center;
+  gap: 16px;
+}
+
+.card {
+  height:240px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 -1px 4px 0 rgba(25, 32, 36, 0.04), 0 3px 6px 0 rgba(25, 32, 36, 0.16);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  word-break: break-all;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-image {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-right: 18px;
+}
+
+.card-front-name {
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  color: #192024;
+}
+
+.flip {
+  --rotate-y: 180deg;
+  border-radius: 8px;
+  border: solid 1px #363f45;
+  box-shadow: 0 -1px 4px 0 rgba(25, 32, 36, 0.04), 0 3px 6px 0 rgba(25, 32, 36, 0.16);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-back-name {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: bold;
+  color: #192024;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-back-alliance {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: normal;
+  color: #192024;
+}
+
+.card-back-site {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: normal;
+  color: #5a6872;
+}
+
+ul {
+  list-style: none;
 }
